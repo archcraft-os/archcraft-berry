@@ -2,7 +2,7 @@
 
 pkgname=archcraft-berry
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="berry Configurations for Archcraft"
 url="https://github.com/archcraft-os/archcraft-berry"
 arch=('any')
@@ -36,4 +36,6 @@ package() {
 	install -Dm 644 dunstrc   		"$_config"/dunstrc
 	install -Dm 644 picom.conf   	"$_config"/picom.conf
 	install -Dm 644 sxhkdrc   		"$_config"/sxhkdrc
+
+	install -Dm 644 berry.desktop   ${pkgdir}/usr/share/xsessions/berry.desktop
 }
