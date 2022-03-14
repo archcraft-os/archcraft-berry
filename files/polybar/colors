@@ -1,0 +1,18 @@
+## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[color]
+BG = #011826
+BGL = #193241
+BGA = #656565
+FG = #EEEEEE
+
+pink = #D97E96
+magenta = #A36584
+purple = #635373
+blue = #496886
+slate = #152B42
+gray = #1A2133
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
