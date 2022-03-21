@@ -28,6 +28,9 @@ sxhkd -c ~/.config/berry/sxhkdrc &
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 
+# enable num lock
+numlockx &
+
 # Set/Restore wallpaper
 hsetroot -cover ~/.config/berry/wallpapers/default.jpg
 
