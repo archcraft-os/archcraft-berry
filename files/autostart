@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+##
+## Config file for berry WM
+
+## Berry Configs -----------------------------------------------
+
+# Set decoration geometry
+berryc border_width 		0
+berryc inner_border_width 	4
+berryc title_height 		30
+#berryc top_gap 			82
+berryc edge_gap 			82 20 20 20
+
+# Set decoration colors
+berryc focus_color 			292D3E
+berryc unfocus_color 		292D3E
+berryc inner_focus_color 	D97E96
+berryc inner_unfocus_color 	496886
+berryc text_focus_color 	FFFFFF
+berryc text_unfocus_color 	011826
+
+# Other options
+berryc set_font 			"Iosevka-10"
+berryc smart_place 			"true"
+berryc draw_text 			"true"
+berryc edge_lock 			"true"
+berryc json_status 			"true"
+berryc decorate_new 		"true"
+berryc pointer_interval 	0
+berryc manage 				Dialog|Toolbar|Menu|Splash|Utility 
+
+## Autostart Programs ------------------------------------------
+bash "$HOME"/.config/berry/bin/autostart.sh
