@@ -20,6 +20,7 @@ window {
     border-color:                  	@selected;
     border-radius:                  14px;
     width:                          400px;
+    height:                         420px;
     location:                       center;
     anchor:                         center;
     x-offset:                       0;
