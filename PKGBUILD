@@ -2,7 +2,7 @@
 
 pkgname=archcraft-berry
 pkgver=1.0
-pkgrel=4
+pkgrel=5
 pkgdesc="berry Configurations for Archcraft"
 url="https://github.com/archcraft-os/archcraft-berry"
 arch=('any')
@@ -15,8 +15,6 @@ depends=('berry-git'
 		'maim' 'xclip' 'viewnior'
 		'ksuperkey' 
 		'betterlockscreen'
-		'picom-ibhagwan-git' 
-		'xfce-polkit' 
 		'xfce4-power-manager' 
 		'sxhkd' 
 		'hsetroot')
@@ -33,7 +31,7 @@ package() {
 	local _config=${pkgdir}/etc/skel/.config/berry
 	mkdir -p "$_config"
 
-	# Copy i3wm config files
+	# Copy config files
 	cp -r ${srcdir}/alacritty 		"$_config"
 	cp -r ${srcdir}/bin 			"$_config"
 	cp -r ${srcdir}/polybar 		"$_config"
