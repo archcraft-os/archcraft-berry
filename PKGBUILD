@@ -2,7 +2,7 @@
 
 pkgname=archcraft-berry
 pkgver=1.0
-pkgrel=5
+pkgrel=6
 pkgdesc="berry Configurations for Archcraft"
 url="https://github.com/archcraft-os/archcraft-berry"
 arch=('any')

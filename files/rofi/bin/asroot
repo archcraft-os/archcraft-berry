@@ -4,26 +4,25 @@
 ## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 
 DIR="$HOME/.config/berry"
-
-rofi_command="rofi -theme $DIR/rofi/themes/asroot.rasi"
+rofi_cmd="rofi -theme $DIR/rofi/themes/asroot.rasi"
 
 # Apps
 terminal=" Alacritty"
 files=" Thunar"
 editor=" Geany"
 clifm=" Ranger"
-lpad=" Leafpad"
 vim=" Vim"
 
 # Variable passed to rofi
 options="$terminal\n$files\n$editor\n$clifm\n$vim"
+term='alacritty --class alacritty-float,alacritty-float --config-file /root/.config/alacritty/alacritty.yml'
 
 # Functions
 
-chosen="$(echo -e "$options" | $rofi_command -p "Run as root" -dmenu -selected-row 0)"
+chosen="$(echo -e "$options" | $rofi_cmd -p "Run as root" -dmenu -selected-row 0)"
 case $chosen in
     $terminal)
-        "$DIR"/bin/asroot.sh 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/alacritty/alacritty.yml'
+        "$DIR"/bin/asroot.sh "$term"
         ;;
     $files)
         "$DIR"/bin/asroot.sh 'dbus-run-session thunar'
@@ -32,14 +31,9 @@ case $chosen in
         "$DIR"/bin/asroot.sh geany
         ;;
     $clifm)
-        "$DIR"/bin/asroot.sh 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/alacritty/alacritty.yml -e ranger'
-        ;;
-    $lpad)
-        "$DIR"/bin/asroot.sh leafpad
+        "$DIR"/bin/asroot.sh "$term -e ranger"
         ;;
     $vim)
-        "$DIR"/bin/asroot.sh 'alacritty --class alacritty-float,alacritty-float --config-file /root/.config/alacritty/alacritty.yml -e vim'
+        "$DIR"/bin/asroot.sh "$term -e vim"
         ;;
 esac
-
-

@@ -5,7 +5,7 @@
 
 DIR="$HOME/.config/berry"
 
-rofi_command="rofi -theme $DIR/rofi/themes/mpd.rasi"
+rofi_cmd="rofi -theme $DIR/rofi/themes/mpd.rasi"
 
 button_music=''
 button_play=''
@@ -62,7 +62,7 @@ if [[ -z "$current" ]]; then
 fi
 
 # Spawn the mpd menu with the "Play / Pause" entry selected by default
-chosen="$(echo -e "$options" | $rofi_command -p "$current" -dmenu $active $urgent -selected-row 0)"
+chosen="$(echo -e "$options" | $rofi_cmd -p "$current" -dmenu $active $urgent -selected-row 0)"
 case $chosen in
     $button_previous)
         mpc -q prev && kunst --size 60x60 --silent
