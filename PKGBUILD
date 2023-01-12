@@ -1,9 +1,9 @@
 # Maintainer: Aditya Shakya <adi1090x@gmail.com>
 
 pkgname=archcraft-berry
-pkgver=1.0
-pkgrel=6
-pkgdesc="berry Configurations for Archcraft"
+pkgver=2.0
+pkgrel=0
+pkgdesc="Berry Configurations for Archcraft"
 url="https://github.com/archcraft-os/archcraft-berry"
 arch=('any')
 license=('GPL3')
@@ -16,8 +16,10 @@ depends=('berry-git'
 		'ksuperkey' 
 		'betterlockscreen'
 		'xfce4-power-manager' 
-		'sxhkd' 
-		'hsetroot')
+		'sxhkd' 'hsetroot'
+		'wmname'
+		'pulsemixer' 'light' 'xcolor'
+)
 conflicts=()
 provides=("${pkgname}")
 options=(!strip !emptydirs)

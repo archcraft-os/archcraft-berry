@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
 ##
 ## Config file for berry WM
 
@@ -31,6 +30,11 @@ berryc json_status 			"true"
 berryc decorate_new 		"true"
 berryc pointer_interval 	0
 berryc manage 				Dialog|Toolbar|Menu|Splash|Utility 
+
+berryc move_mask 			"mod1"
+berryc move_button 			1
+berryc resize_mask 			"mod4"
+berryc resize_button 		3
 
 ## Autostart Programs ------------------------------------------
 bash "$HOME"/.config/berry/bin/autostart.sh

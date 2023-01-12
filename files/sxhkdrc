@@ -1,5 +1,4 @@
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
 
 ##---------- Keybindings for berry ----------##
 
@@ -43,37 +42,37 @@ ctrl + alt + l
 
 # Take a screenshot
 Print
-	takeshot --now
+	~/.config/berry/bin/berryscreenshot.sh --now
 	
 # Take screenshot in 5 second
 alt + Print	
-	takeshot --in5
+	~/.config/berry/bin/berryscreenshot.sh --in5
 
 # Take screenshot in 10 second
 shift + Print	
-	takeshot --in10
+	~/.config/berry/bin/berryscreenshot.sh --in10
 
 # Take screenshot of active window
 ctrl + Print
-	takeshot --win
+	~/.config/berry/bin/berryscreenshot.sh --win
 
 # Take screenshot of area
-ctrl + alt + Print
-	takeshot --area
+super + Print
+	~/.config/berry/bin/berryscreenshot.sh --area
 
 # Brighness control
 XF86MonBrightness{Up,Down}
-	brightness{ --inc, --dec}
+	~/.config/berry/bin/berrybrightness.sh{ --inc, --dec}
 	
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume}
-	volume{ --inc, --dec}
+	~/.config/berry/bin/berryvolume.sh{ --inc, --dec}
 
 XF86AudioMute
-	volume --toggle
+	~/.config/berry/bin/berryvolume.sh --toggle
 	
 XF86AudioMicMute
-	volume --toggle-mic
+	~/.config/berry/bin/berryvolume.sh --toggle-mic
 
 # Music control
 XF86Audio{Next,Prev,Play,Stop}
@@ -116,6 +115,9 @@ super + t
     berryc toggle_decorations
 
 super + Tab
+    berryc cycle_focus
+
+alt + Tab
     berryc cycle_focus
 
 super + c
