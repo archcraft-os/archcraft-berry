@@ -2,7 +2,7 @@
 
 pkgname=archcraft-berry
 pkgver=2.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Berry Configurations for Archcraft"
 url="https://github.com/archcraft-os/archcraft-berry"
 arch=('any')
@@ -46,6 +46,9 @@ package() {
 	install -Dm 755 autostart   	"$_config"/autostart
 	install -Dm 644 dunstrc   		"$_config"/dunstrc
 	install -Dm 644 picom.conf   	"$_config"/picom.conf
+	install -Dm 644 picom-ibhagwan.conf   	"$_config"/picom-ibhagwan.conf
+	install -Dm 644 picom-jonaburg.conf   	"$_config"/picom-jonaburg.conf
+	install -Dm 644 picom-original.conf   	"$_config"/picom-original.conf
 	install -Dm 644 sxhkdrc   		"$_config"/sxhkdrc
 
 	install -Dm 644 berry.desktop   ${pkgdir}/usr/share/xsessions/berry.desktop
