@@ -4,25 +4,29 @@
 
 # Terminal (alacritty)
 super + Return
-	bash ~/.config/berry/bin/berryterm.sh
+	bash ~/.config/berry/scripts/berry_term
 
 # Terminal (floating)
 super + shift + Return
-	bash ~/.config/berry/bin/berryterm.sh --full
+	bash ~/.config/berry/scripts/berry_term --full
 
 ##---------- Rofi Launcher & Menus ----------##
 
 # Rofi App Launcher
 alt + F1
-	bash ~/.config/berry/rofi/bin/launcher
+	bash ~/.config/berry/scripts/rofi_launcher
+
+# Rofi Runner
+alt + F2
+	bash ~/.config/berry/scripts/rofi_runner
 
 # Rofi Network Menu
 super + n
-	~/.config/berry/rofi/bin/network_menu
+	~/.config/berry/scripts/network_menu
 
 # Rofi Menus/Applets
-super + {r,m,s,x}
-	bash ~/.config/berry/rofi/bin/{asroot,mpd,screenshot,powermenu}
+super + {b,r,m,s,x,w}
+	bash ~/.config/berry/scripts/{rofi_bluetooth,rofi_asroot,rofi_music,rofi_screenshot,rofi_powermenu,rofi_windows}
 
 ##---------- Applications ----------##
 
@@ -38,41 +42,49 @@ ctrl + alt + {v,r,h}
 ctrl + alt + l
     betterlockscreen --lock
 
+# Music Player
+ctrl + alt + m
+    ~/.config/berry/scripts/berry_music
+
+# Color Picker
+super + p
+    ~/.config/berry/scripts/berry_colorpicker
+
 ##---------- System Keys ----------##
 
 # Take a screenshot
 Print
-	~/.config/berry/bin/berryscreenshot.sh --now
+	~/.config/berry/scripts/berry_screenshot --now
 	
 # Take screenshot in 5 second
 alt + Print	
-	~/.config/berry/bin/berryscreenshot.sh --in5
+	~/.config/berry/scripts/berry_screenshot --in5
 
 # Take screenshot in 10 second
 shift + Print	
-	~/.config/berry/bin/berryscreenshot.sh --in10
+	~/.config/berry/scripts/berry_screenshot --in10
 
 # Take screenshot of active window
 ctrl + Print
-	~/.config/berry/bin/berryscreenshot.sh --win
+	~/.config/berry/scripts/berry_screenshot --win
 
 # Take screenshot of area
 super + Print
-	~/.config/berry/bin/berryscreenshot.sh --area
+	~/.config/berry/scripts/berry_screenshot --area
 
 # Brighness control
 XF86MonBrightness{Up,Down}
-	~/.config/berry/bin/berrybrightness.sh{ --inc, --dec}
+	~/.config/berry/scripts/berry_brightness{ --inc, --dec}
 	
 # Volume control
 XF86Audio{RaiseVolume,LowerVolume}
-	~/.config/berry/bin/berryvolume.sh{ --inc, --dec}
+	~/.config/berry/scripts/berry_volume{ --inc, --dec}
 
 XF86AudioMute
-	~/.config/berry/bin/berryvolume.sh --toggle
+	~/.config/berry/scripts/berry_volume --toggle
 	
 XF86AudioMicMute
-	~/.config/berry/bin/berryvolume.sh --toggle-mic
+	~/.config/berry/scripts/berry_volume --toggle-mic
 
 # Music control
 XF86Audio{Next,Prev,Play,Stop}

@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+##
+## Autostart Programs
+
+# berry dir
+bdir="$HOME/.config/berry"
+
+# Kill already running process
+_ps=(xsettingsd ksuperkey)
+for _prs in "${_ps[@]}"; do
+	if [[ `pidof ${_prs}` ]]; then
+		killall -9 ${_prs}
+	fi
+done
+
+# Enable Simple X hotkey daemon
+sxhkd -c "$bdir"/sxhkdrc &
+
+# Lauch xsettingsd daemon
+xsettingsd --config="$bdir"/xsettingsd &
+
+# polkit agent
+if [[ ! `pidof xfce-polkit` ]]; then
+	/usr/lib/xfce-polkit/xfce-polkit &
+fi
+
+# Enable power management
+xfce4-power-manager &
+
+# Enable Super Keys For Menu
+ksuperkey -e 'Super_L=Alt_L|F1' &
+ksuperkey -e 'Super_R=Alt_L|F1' &
+
+# Fix cursor
+xsetroot -cursor_name left_ptr
+
+# Restore wallpaper
+hsetroot -root -cover "$bdir"/theme/wallpaper
+
+# Lauch notification daemon
+"$bdir"/scripts/berry_dunst
+
+# Lauch polybar
+"$bdir"/scripts/berry_bar
+
+# Lauch compositor
+"$bdir"/scripts/berry_comp
+
+# Start mpd
+exec mpd &

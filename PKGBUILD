@@ -1,8 +1,8 @@
 # Maintainer: Aditya Shakya <adi1090x@gmail.com>
 
 pkgname=archcraft-berry
-pkgver=2.0
-pkgrel=4
+pkgver=3.0
+pkgrel=0
 pkgdesc="Berry Configurations for Archcraft"
 url="https://github.com/archcraft-os/archcraft-berry"
 arch=('any')
@@ -17,6 +17,7 @@ depends=('berry-git'
 		'betterlockscreen'
 		'xfce4-power-manager' 
 		'sxhkd' 'hsetroot'
+		'xsettingsd'
 		'wmname'
 		'pulsemixer' 'light' 'xcolor'
 )
@@ -35,13 +36,13 @@ package() {
 
 	# Copy config files
 	cp -r ${srcdir}/alacritty 		"$_config"
-	cp -r ${srcdir}/bin 			"$_config"
-	cp -r ${srcdir}/polybar 		"$_config"
-	cp -r ${srcdir}/rofi 			"$_config"
-	cp -r ${srcdir}/wallpapers 		"$_config"
+	cp -r ${srcdir}/scripts 		"$_config"
+	cp -r ${srcdir}/theme 			"$_config"
 
-	chmod +x "$_config"/bin/*
-	chmod +x "$_config"/rofi/bin/*
+	chmod +x "$_config"/scripts/*
+	chmod +x "$_config"/theme/polybar.sh
+	chmod +x "$_config"/theme/polybar/launch.sh
+	chmod +x "$_config"/theme/polybar/scripts/bluetooth.sh
 
 	install -Dm 755 autostart   			"$_config"/autostart
 	install -Dm 644 dunstrc   				"$_config"/dunstrc
@@ -50,6 +51,7 @@ package() {
 	install -Dm 644 picom-jonaburg.conf   	"$_config"/picom-jonaburg.conf
 	install -Dm 644 picom-original.conf   	"$_config"/picom-original.conf
 	install -Dm 644 sxhkdrc   				"$_config"/sxhkdrc
+	install -Dm 644 xsettingsd   			"$_config"/xsettingsd
 
 	install -Dm 644 berry.desktop   ${pkgdir}/usr/share/xsessions/berry.desktop
 }

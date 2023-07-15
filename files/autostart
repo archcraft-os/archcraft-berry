@@ -37,4 +37,4 @@ berryc resize_mask 			"mod4"
 berryc resize_button 		3
 
 ## Autostart Programs ------------------------------------------
-bash "$HOME"/.config/berry/bin/autostart.sh
+bash "$HOME"/.config/berry/scripts/berry_autostart

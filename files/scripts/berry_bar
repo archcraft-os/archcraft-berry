@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+
+# berry directory
+DIR="$HOME/.config/berry"
+
+# launch polybar
+bash "$DIR"/theme/polybar.sh
