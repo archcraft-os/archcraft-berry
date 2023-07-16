@@ -25,8 +25,8 @@ super + n
 	~/.config/berry/scripts/network_menu
 
 # Rofi Menus/Applets
-super + {b,r,m,s,x,w}
-	bash ~/.config/berry/scripts/{rofi_bluetooth,rofi_asroot,rofi_music,rofi_screenshot,rofi_powermenu,rofi_windows}
+super + {b,r,m,s,x}
+	bash ~/.config/berry/scripts/{rofi_bluetooth,rofi_asroot,rofi_music,rofi_screenshot,rofi_powermenu}
 
 ##---------- Applications ----------##
 
