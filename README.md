@@ -1,2 +1,2 @@
 # archcraft-berry
- // Configuration : berry
+ // Configuration : Berry
