@@ -1,4 +1,4 @@
-## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
+## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
 
 ##---------- Keybindings for berry ----------##
 
@@ -36,7 +36,7 @@ super + {f,w,e}
 
 # Terminal Apps
 ctrl + alt + {v,r,h}
-	alacritty --config-file ~/.config/berry/alacritty/alacritty.yml -e {vim,ranger,htop}
+	alacritty --config-file ~/.config/berry/alacritty/alacritty.toml -e {vim,ranger,htop}
 
 # Lockscreen
 ctrl + alt + l
