@@ -6,10 +6,6 @@
 configuration {
 	modi:                       "drun,run,filebrowser";
     show-icons:                 false;
-    display-drun:               " Apps";
-    display-run:                " Run";
-    display-filebrowser:        " Files";
-    display-window:             " Windows";
 	drun-display-format:        "{name}";
 	window-format:              "{c} · {t}";
 }
@@ -112,10 +108,10 @@ prompt {
 }
 textbox-prompt-colon {
     enabled:                     true;
-    padding:                     6px 10px;
+    padding:                     6px 8px;
     border-radius:               100%;
     expand:                      false;
-    str:                         "";
+    str:                         "";
     background-color:            @background;
     text-color:                  @foreground;
 }

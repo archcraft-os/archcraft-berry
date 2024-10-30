@@ -10,6 +10,10 @@ super + Return
 super + shift + Return
 	bash ~/.config/berry/scripts/berry_term --full
 
+# Terminal (kitty)
+ctrl + alt + t
+	bash ~/.config/berry/scripts/berry_kitty
+
 ##---------- Rofi Launcher & Menus ----------##
 
 # Rofi App Launcher
